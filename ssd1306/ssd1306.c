@@ -852,7 +852,7 @@ int ssd1306_draw_char(const ssd1306_t *dev, uint8_t *fb, const font_info_t *font
     uint8_t i, j;
     const uint8_t *bitmap;
     uint8_t line = 0;
-    int err;
+    int err = NULL;
 
     if (font == NULL)
         return 0;
