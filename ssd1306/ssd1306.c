@@ -405,8 +405,6 @@ int ssd1306_draw_pixel(const ssd1306_t *dev, uint8_t *fb, int8_t x, int8_t y, ss
 
     if ((x >= dev->width) || (x < 0) || (y >= dev->height) || (y < 0))
         return -EINVAL;
-    y = dev->height - y - 1;
-    x = dev->width - x - 1;
     index = x + (y / 8) * dev->width;
     switch (color) {
         case OLED_COLOR_WHITE:
