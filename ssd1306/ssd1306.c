@@ -147,10 +147,10 @@ int ssd1306_init(const ssd1306_t *dev)
                 !ssd1306_set_segment_remapping_enabled(dev, false)               &&
                 !ssd1306_set_scan_direction_fwd(dev, true)                       &&
                 !ssd1306_set_com_pin_hw_config(dev, pin_cfg)                     &&
-                !ssd1306_set_contrast(dev, 0x9f)                                 &&
+                !ssd1306_set_contrast(dev, 0x7f)                                 &&
                 !ssd1306_set_precharge_period(dev, 0xf1)                         &&
                 !ssd1306_set_deseltct_lvl(dev, 0x40)                             &&
-                !ssd1306_set_whole_display_lighting(dev, true)                   &&
+                !ssd1306_set_whole_display_lighting(dev, false)                  &&
                 !ssd1306_set_inversion(dev, false)                               &&
                 !ssd1306_display_on(dev, true)) {
             return 0;
@@ -167,10 +167,10 @@ int ssd1306_init(const ssd1306_t *dev)
                 !ssd1306_set_segment_remapping_enabled(dev, true)                &&
                 !ssd1306_set_scan_direction_fwd(dev, true)                       &&
                 !ssd1306_set_com_pin_hw_config(dev, pin_cfg)                     &&
-                !ssd1306_set_contrast(dev, 0x9f)                                 &&
+                !ssd1306_set_contrast(dev, 0x7f)                                 &&
                 !ssd1306_set_precharge_period(dev, 0xf1)                         &&
                 !ssd1306_set_deseltct_lvl(dev, 0x40)                             &&
-                !ssd1306_set_whole_display_lighting(dev, true)                   &&
+                !ssd1306_set_whole_display_lighting(dev, false)                  &&
                 !ssd1306_set_inversion(dev, false)                               &&
                 !ssd1306_display_on(dev, true)) {
             return 0;
